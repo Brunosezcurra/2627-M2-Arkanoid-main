@@ -8,7 +8,7 @@ from arkanoid_core import *
 # --------------------------------------------------------------------- #
 # Métodos a completar por el alumnado
 # --------------------------------------------------------------------- #
-
+#inicio
 @arkanoid_method
 def cargar_nivel(self) -> list[str]:
     """Lee el fichero de nivel y devuelve la cuadrícula como lista de filas."""
