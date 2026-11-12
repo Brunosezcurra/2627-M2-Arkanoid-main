@@ -38,17 +38,27 @@ utiliza los apuntes, la documentación, las pruebas propias y las tutorías. Si 
 forma puntual, decláralo en el README y comprueba que puedes explicar, probar y modificar
 todo el código generado. La IA no está permitida en simulacros, controles ni exámenes.
 
+En este proyecto se usó IA de forma puntual para depurar el arranque y validar la carga de niveles.
+
 ## Requisitos previos
 1. Asegúrate de tener Python 3.10 o superior.
 2. Instala `pygame` en tu entorno si aún no lo tienes:
    ```bash
    python -m pip install pygame
    ```
+   Si usas Python 3.14 y la instalación de `pygame` falla, instala su versión
+   compatible:
+   ```bash
+   python -m pip install pygame-ce
+   ```
+   `pygame-ce` se importa igualmente como `pygame`.
 3. Ejecuta la plantilla con:
    ```bash
    python arkanoid_game.py niveles/demo.txt
    ```
-   Sustituye `niveles/demo.txt` por el fichero de nivel que quieras usar durante el desarrollo.
+   También puedes ejecutarla sin argumentos (por ejemplo, con el botón **Run** de VS Code):
+   se abrirá `niveles/demo.txt` automáticamente. Sustituye esa ruta por el fichero de nivel
+   que quieras usar durante el desarrollo.
 
 ## Contexto
 La nueva entrega de Arkanoid necesita un prototipo jugable que recoja los fundamentos del juego clásico: una paleta, una bola y filas de bloques que deben desaparecer con los rebotes. Para facilitar el desarrollo, el fichero arkanoid_core se encarga de gestionar el ciclo principal del juego, la carga de niveles, la detección de colisiones y el pintado en pantalla. Cada funcionalidad está separada en métodos que debes completar.
@@ -116,3 +126,14 @@ Completa los métodos marcados con `TODO` siguiendo el orden propuesto y respeta
 - Control del flujo de juego (inicialización, loop principal y cierre limpio).
 - Gestión de colisiones y actualización de puntuación/vidas.
 - Apartado opcional: se valorará positivamente añadir niveles extra, mejoras visuales o efectos de sonido siempre que no rompan la estructura base.
+
+## Uso de Inteligencia artificial
+He hecho uso de la Inteligencia artificial de forma didáctica para aprender a lo largo del trabajo.
+También la he utilizado en momentos puntuales para solucionar errores que no era capaz de comprender, tales como:
+- Un error en el que a pesar de tener todas las extensiones instaladas, no me ejecutaba el juego en segundo plano.
+
+- Físicas y gestión de colisiones vectoriales (actualizar_bola): Ayudarme a entender del movimiento basado en vectores de posición y velocidad (Vector2), la detección de colisiones mediante la función colliderect.
+
+- Control del bucle principal del juego (run): Entender del ciclo de vida de un juego en pygame, controlando la inicialización de recursos, la captura de eventos de la cola (EVENT_QUIT y EVENT_KEYDOWN con ESC).
+
+Tras acabar el trabajo, he revisado todo el código y asegurarme con apuntes y explicaciones de la IA, que lo entiendo todo.
